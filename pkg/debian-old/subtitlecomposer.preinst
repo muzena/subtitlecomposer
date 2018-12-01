@@ -1,14 +1,11 @@
 #!/bin/bash
 set -e
-# https://stackoverflow.com/questions/394230/detect-the-os-from-a-bash-script
-###  awk -F= '/UBUNTU_CODENAME/ {print $2}' /etc/os-release
-###  cat /etc/os-release | grep '^UBUNTU_CODENAME' | awk -F=  '{ print $2 }'
+
 . /etc/os-release
-# SubtitleComposer dependencies repository
-#if [ `awk -F= '/UBUNTU_CODENAME/ {print $2}' /etc/os-release` = "xenial" ]
+
 if [ $UBUNTU_CODENAME = "xenial" ]
     then
-        echo "Adding SubtitleComposer dependencies repository"
+        echo "Adding SubtitleComposer dependencies repositories"
         add-apt-repository -y ppa:jonathonf/ffmpeg-3
         wait $!
         add-apt-repository -y ppa:kubuntu-ppa/backports
@@ -17,7 +14,7 @@ if [ $UBUNTU_CODENAME = "xenial" ]
         
 elif [ $UBUNTU_CODENAME = "14.04" ]
     then
-        echo "Adding SubtitleComposer dependencies repository"
+        echo "Adding SubtitleComposer dependencies repositories"
         add-apt-repository -y ppa:jonathonf/ffmpeg-3
         wait $!
         #add-apt-repository -y ppa:kubuntu-ppa/backports
