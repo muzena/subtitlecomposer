@@ -20,7 +20,8 @@ deb http://ppa.launchpad.net/kubuntu-ppa/backports/ubuntu xenial main' | tee /et
         apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 4AB0F789CBA31744CC7DA76A8CF63AD3F06FC659
 	    #add-apt-repository -y ppa:kubuntu-ppa/backports
         wait $!
-        apt-get -qq update
+        #apt-get -qq update
+        apt-get update
         
 elif [ $UBUNTU_CODENAME = "14.04" ]
     then
