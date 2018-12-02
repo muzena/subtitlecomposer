@@ -23,7 +23,7 @@ deb http://ppa.launchpad.net/kubuntu-ppa/backports/ubuntu xenial main' | tee /et
         apt-get -qq update
         wait $!
         #apt-get -qq -y dist-upgrade #>/dev/null 2>&1
-        apt-get -y dist-upgrade
+        #apt-get -y dist-upgrade
         
 elif [ $UBUNTU_CODENAME = "14.04" ]
     then
