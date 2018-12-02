@@ -41,5 +41,3 @@ deb http://ppa.launchpad.net/jonathonf/ffmpeg-3/ubuntu trusty main
 fi
 
 exit 0
-
-echo "deb http://ppa.launchpad.net/mythbuntu/$version/ubuntu $release main" >> /etc/apt/sources.list.d/mythbuntu-repos.list
